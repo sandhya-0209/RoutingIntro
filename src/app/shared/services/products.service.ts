@@ -43,4 +43,16 @@ export class ProductsService {
     this.productsArr.push(prod);
     this._router.navigate(['products'])
   }
+
+  updatedProd(updatedObj : Iproduct){
+    let getIndex = this.productsArr.findIndex(prod => prod.pid === updatedObj.pid)
+    this.productsArr[getIndex] = updatedObj;
+    this._router.navigate(['products'])
+  }
+
+  removeProd(removeId: string){
+    let getIndex = this.productsArr.findIndex(prod => prod.pid === removeId);
+    this.productsArr.splice(getIndex,1);
+    this._router.navigate(['products'])
+  }
 }

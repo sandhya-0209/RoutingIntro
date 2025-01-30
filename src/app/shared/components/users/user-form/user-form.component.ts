@@ -58,10 +58,10 @@ export class UserFormComponent implements OnInit {
         let userObj = {...this.usersForm.value, userId : this._uuid.generateUuid()};
         this._usersService.addUser(userObj);
       }else if(this.mode === 'edit'){
-        console.log('Update Api Call')
+       let updatedUser = {...this.usersForm.value, userId: this.userId};
+       this._usersService.updateUser(updatedUser)
       }
-
-      
     }
   }
+
 }

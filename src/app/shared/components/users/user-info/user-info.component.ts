@@ -22,4 +22,8 @@ export class UserInfoComponent implements OnInit {
     this.userObj = this._userService.getUsersInfo(this.userId);
   }
 
+  onRemove(){
+    this._userService.removeUser(this.userObj);
+  }
+
 }

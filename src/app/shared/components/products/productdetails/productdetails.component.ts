@@ -16,9 +16,16 @@ export class ProductdetailsComponent implements OnInit {
     private _route : ActivatedRoute
   ) { }
   ngOnInit(): void {
-    // console.log(this._route.snapshot.params['prodId'])
+    this.getParamsId()
+  }
+
+  getParamsId(){
     this.productId = this._route.snapshot.params['prodId'];
     this.productObj = this._productsService.getProduct(this.productId);
+   }
+
+  onProdRemove(){
+    this._productsService.removeProd(this.productId)
   }
 
 }

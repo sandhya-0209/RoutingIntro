@@ -6,13 +6,16 @@
 </div>
 <div class="row">
     <div class="col-md-4">
-        <ul class="list-group">
+        <ul class="list-group" *ngIf="usersArr.length>0;else noUser">
             <li [routerLink]="[user.userId]"
             *ngFor="let user of usersArr"
              class="list-group-item">
               {{user.userName}}
             </li>
         </ul>
+        <ng-template #noUser>
+             <p class="alert alert-warning">No User is Available !!!</p>
+        </ng-template>
     </div>
     <div class="col-md-8">
 

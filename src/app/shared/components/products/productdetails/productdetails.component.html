@@ -6,4 +6,5 @@
 
 <button [routerLink]="['/products',productId,'editproduct']"
 class="btn btn-sm btn-outline-info mr-3">Edit</button>
-<button class="btn btn-sm btn-outline-danger">Remove</button>
+<button (click)="onProdRemove()"
+ class="btn btn-sm btn-outline-danger">Remove</button>

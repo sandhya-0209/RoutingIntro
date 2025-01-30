@@ -49,10 +49,18 @@ export class UsersService {
     this._router.navigate(['users'])
   }
 
-  // updateUser(updatedObj : Iuser){
-  //   //API call to update obj
-  //   let getIndex = this.usersArr.findIndex(user => user.userId === updatedObj.userId)
-  //   this.usersArr[getIndex] = updatedObj;
-  //   this._router.navigate(['users']);
-  // }
+  updateUser(updatedObj : Iuser){
+    //API call to update obj
+    let getIndex = this.usersArr.findIndex(user => user.userId === updatedObj.userId)
+    this.usersArr[getIndex] = updatedObj;
+    this._router.navigate(['users']);
+  }
+
+  removeUser(userObj: Iuser){
+   let getIndex = this.usersArr.findIndex(user => user.userId === userObj.userId);
+   this.usersArr.splice(getIndex,1);
+   this._router.navigate(['users']);
+  }
 }
+
+

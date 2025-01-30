@@ -6,4 +6,5 @@
 
 <button [routerLink]="['/users',userObj.userId,'edituser']"
 class="btn btn-sm btn-outline-info mr-3">Edit</button>
-<button class="btn btn-sm btn-outline-danger">Remove</button>
+<button (click)="onRemove()"
+class="btn btn-sm btn-outline-danger">Remove</button>

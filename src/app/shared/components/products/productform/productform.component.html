@@ -22,14 +22,15 @@
                      </select>
                 </div>
                 <div class="form-group">
-                    <label for="canReturn">canReturn</label>
+                    <label for="canReturn">Product canReturn</label>
                     <select formControlName="canReturn" id="canReturn" class="form-control">
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                     </select>
                 </div>
-                <button class="btn btn-sm btn-outline-info">
-                    Add Product
+                <button [type]="isInEditMode ? 'button' : 'submit'"
+                class="btn btn-sm btn-outline-info" (click)="onUpdate()">
+                    {{isInEditMode ? 'Update Product' : 'Add Product'}}
                 </button>
             </form>
         </div>
