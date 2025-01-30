@@ -1,0 +1,9 @@
+
+<p class="alert alert-info">
+    The product is <strong>{{productObj.pname}}</strong> and
+    status is <strong>{{productObj.pstatus}}</strong>
+</p>
+
+<button [routerLink]="['/products',productId,'editproduct']"
+class="btn btn-sm btn-outline-info mr-3">Edit</button>
+<button class="btn btn-sm btn-outline-danger">Remove</button>

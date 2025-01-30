@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-12 text-right">
+        <button routerLink="/users/adduser"
+        class="btn btn-outline-info">Add User</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li [routerLink]="[user.userId]"
+            *ngFor="let user of usersArr"
+             class="list-group-item">
+              {{user.userName}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-8">
+
+    </div>
+</div>
+
+<!-- absolute path >> "/"
+ http://localhost:4200 >> baseUrl >> http://localhost:4200/users/123
+ -->
+<!-- relative path :- we also call relative path as CurrentActivUrl
+ [routerLink]="['users',user.userId]"
+ CurrentActivUrl == http://localhost:4200/users >> http://localhost:4200/users/users/123 
+ -->

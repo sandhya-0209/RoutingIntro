@@ -1,0 +1,9 @@
+
+<p>
+    The user name is <strong>{{userObj.userName}}</strong> with id
+     <strong>{{userObj.userId}}</strong> and userRole <strong>{{userObj.userRole}}</strong>
+</p>
+
+<button [routerLink]="['/users',userObj.userId,'edituser']"
+class="btn btn-sm btn-outline-info mr-3">Edit</button>
+<button class="btn btn-sm btn-outline-danger">Remove</button>
